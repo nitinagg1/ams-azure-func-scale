@@ -80,9 +80,6 @@ class AzureLogAnalyticsAsync:
                         logging.error(
                             f"unable to Write: code {response.status} message {response.text}")
                         raise Exception("got exception from LAWS")
-                    else:
-                        logging.debug("total time taken to push data to log analytics "+\
-                            f"workspace: {time.time()-start_time}")
 
         except Exception as exception:
             raise
