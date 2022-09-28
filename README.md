@@ -1,0 +1,1 @@
+# ams-azure-func-scale
