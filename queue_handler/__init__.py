@@ -47,7 +47,7 @@ async def main(msg: func.QueueMessage, context:func.Context) -> None:
         table_name = f'Table{random.randint(1,10)}'
         # azure_laws_async = AzureLogAnalyticsAsync()
         # await azure_laws_async.post_data(table_name, json.dumps(laws_data))
-        azure_laws_sync = AzureLogAnalyticsAsync()
+        azure_laws_sync = AzureLogAnalyticsSync()
         azure_laws_sync.post_data(table_name, json.dumps(laws_data))
     except:
         logging.exception("failed to push data to laws")
